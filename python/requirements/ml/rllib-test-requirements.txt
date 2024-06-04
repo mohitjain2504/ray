@@ -5,7 +5,7 @@
 # Atari
 gymnasium==0.28.1
 imageio==2.31.1
-ale_py==0.8.1
+ale_py==0.8.1; python_version < "3.11"
 # For testing MuJoCo envs with gymnasium.
 mujoco==2.3.6
 dm_control==1.0.12
@@ -16,8 +16,8 @@ pettingzoo==1.23.1
 # TODO: remove if a future pettingzoo and/or ray version fixes this dependancy issue.
 chess==1.7.0
 pymunk==6.2.1
-supersuit==3.8.0
-tinyscaler==1.2.6
+supersuit==3.8.0; python_version < "3.11"
+tinyscaler==1.2.6; python_version < "3.11"
 shimmy
 
 # Kaggle envs.
