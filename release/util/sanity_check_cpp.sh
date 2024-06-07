@@ -4,4 +4,7 @@
 set -e
 rm -rf ray-template
 ray cpp --generate-bazel-project-template-to ray-template
-pushd ray-template && bash run.sh
+(
+    cd ray-template
+    USE_BAZEL_VERSION=5.4.1 bash run.sh
+)
