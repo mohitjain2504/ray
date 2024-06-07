@@ -185,7 +185,7 @@ class JobAgent(dashboard_utils.DashboardAgentModule):
                 status=aiohttp.web.HTTPBadRequest.status_code,
             )
 
-        ws = aiohttp.web.WebSocketResponse()
+        ws = aiohttp.web.WebSocketResponse(max_msg_size=0)
         await ws.prepare(req)
 
         async for lines in self._job_manager.tail_job_logs(job.submission_id):

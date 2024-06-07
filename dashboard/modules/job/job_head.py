@@ -501,7 +501,7 @@ class JobHead(dashboard_utils.DashboardHeadModule):
                 status=aiohttp.web.HTTPBadRequest.status_code,
             )
 
-        ws = aiohttp.web.WebSocketResponse()
+        ws = aiohttp.web.WebSocketResponse(max_msg_size=0)
         await ws.prepare(req)
 
         driver_agent_http_address = None
